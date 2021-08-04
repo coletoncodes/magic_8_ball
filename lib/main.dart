@@ -10,14 +10,31 @@ void main() => runApp(
 class BallPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blue,
-      appBar: AppBar(
-        backgroundColor: Colors.blue.shade900,
-        title: Text('Ask Me Anything'),
-        centerTitle: true,
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.blue,
+        appBar: AppBar(
+          backgroundColor: Colors.blue.shade900,
+          title: Text('Ask Me Anything'),
+          centerTitle: true,
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              child: Text(
+                'Ask The 8-Ball A Question, & Give It A Tap!',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white),
+              ),
+            ),
+            Ball(),
+          ],
+        ),
       ),
-      body: Ball(),
     );
   }
 }
@@ -32,9 +49,11 @@ class _BallState extends State<Ball> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(50.0),
+    return Expanded(
+      child: Container(
+        margin: EdgeInsets.all(25.0),
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         child: TextButton(
           onPressed: () {
             setState(() {
