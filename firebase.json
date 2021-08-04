@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "coletoncodes-magic-8-ball",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

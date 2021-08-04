@@ -1,27 +1,30 @@
 
 # What It Does
 
-This application uses the [English Words](https://pub.dev/packages/english_words) package, and takes two random words and puts them together in [Pascal Case](https://www.theserverside.com/definition/Pascal-case).
+This application is a simple 8-ball application. You should ask your phone a question, and give it a tap! By doing so, it will give you the wisdom you seek.
 
-**You can preview the app [here](https://coletoncodes-wordpair.web.app).**
+**You can preview the app [here](https://coletoncodes-magic-8-ball.web.app/).**
 
  This will open up a browser version of the application.
 
 # What I Learned
 
-This project taught me the fundamentals of Flutter, Dart, and solidified my knowledge in [Material Design](https://material.io/develop/flutter).
+This project taught me the fundamentals of building stateful widgets with Flutter and solidified my knowledge in providing different asset images inside a single app.
 
 **Some other skills I learned/used with this project:**
-- Flutter Basics
-- Routing
-- Stateful & Stateless Widgets
-- Built In Widgets
-- Creating An Emulator in VSCode
-- Creating a web build in Flutter.
+- How to use Flutter stateless widgets to design the user interface.
+- How to use Flutter stateful widgets to update the user interface.
+- How to change the properties of various widgets.
+- How to use onClick listeners to detect when buttons are pressed.
+- How to use setState to mark the widget tree as dirty and requiring update on the next render.
+- How to use expanded to make widgets adapt to screen dimensions.
+- Understand and use string interpolation.
+- Learn about basic dart programming concepts such as data types and functions.
+- Code and use gesture controls.
 
 ### Features & Ideas For The Future
 
-I would like to keep working on this idea and create a baby name generator application. 
+This is just a simple toy application, I don't have plans for the future. I suppose some more advanced animation would be nice.
 
 # Contact Me
 
