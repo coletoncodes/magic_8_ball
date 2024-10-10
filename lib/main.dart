@@ -2,12 +2,14 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
-      MaterialApp(
+      const MaterialApp(
         home: BallPage(),
       ),
     );
 
 class BallPage extends StatelessWidget {
+  const BallPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -15,21 +17,19 @@ class BallPage extends StatelessWidget {
         backgroundColor: Colors.blue,
         appBar: AppBar(
           backgroundColor: Colors.blue.shade900,
-          title: Text('Ask Me Anything'),
+          title: const Text('Ask Me Anything'),
           centerTitle: true,
         ),
-        body: Column(
+        body: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              child: Text(
-                'Ask The 8-Ball A Question, & Give It A Tap!',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white),
-              ),
+            Text(
+              'Ask The 8-Ball A Question, & Give It A Tap!',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white),
             ),
             Ball(),
           ],
@@ -40,18 +40,20 @@ class BallPage extends StatelessWidget {
 }
 
 class Ball extends StatefulWidget {
+  const Ball({super.key});
+
   @override
-  _BallState createState() => _BallState();
+  BallState createState() => BallState();
 }
 
-class _BallState extends State<Ball> {
+class BallState extends State<Ball> {
   int ballNumber = 1;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        margin: EdgeInsets.all(25.0),
+        margin: const EdgeInsets.all(25.0),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: TextButton(
