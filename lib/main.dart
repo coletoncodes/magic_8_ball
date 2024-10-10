@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
+
 void main() => runApp(
       const MaterialApp(
         home: BallPage(),
@@ -62,7 +63,7 @@ class BallState extends State<Ball> {
               ballNumber = Random().nextInt(5) + 1;
             });
           },
-          child: Image.asset('images/ball$ballNumber.png'),
+          child: Image.asset('assets/images/ball$ballNumber.png'),
         ),
       ),
     );
